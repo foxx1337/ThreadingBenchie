@@ -11,7 +11,7 @@ public class AllPrimeSweepTest {
     @Test
     public void testAllPrimeSweep() {
         for (int threads = 1; threads < 16; threads++) {
-            AllPrimeSweep aps = new AllPrimeSweep(0L, 10_000_000L, 1_000_000L, threads);
+            AllPrimeSweep aps = new AllPrimeSweep(0L, 10_000_000L, 100_000L, threads);
             aps.runTest();
             System.out.print(String.format("%4d threads: ", threads));
             System.out.println("Execution took " + aps.getDuration() + " milliseconds.");
